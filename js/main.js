@@ -6,20 +6,12 @@
 window.addEventListener("DOMContentLoaded", () => {
     // console.log("메인js - 로딩 완료");
 
-    // 🌈🌈새로고침시 맨위로 위치설정! -> 가로 스크롤이동 섹션때문에 자꾸 width값이 커지는 문제 해결 위함🌈🌈
-    // setTimeout(() => window.scrollTo(0, 0), 100);
-
-
     /*********************** 주요프로그램 섹션의 스크롤 액션 ***********************/
     // 기능 : 주요 프로그램 섹션에 진입하기 전에는 이미지가 scale(0)이었다가, 스크롤되어 특정 위치 진입하면 scale(1)이 되어서 제자리에서 등장하도록 만들기
-    // 이벤트 대상 - .pl
     const tg = document.querySelectorAll(".pl img");
     // console.log(pl);
-
-    // 화면 높이값의 5분의4(4/5) 구하기
-    // const hv = (window.innerHeight / 10) * 9;
+    // 화면 높이값 구하기
     const hv = window.innerHeight;
-    // console.log("화면 높이값의 5분의 4 지점은?: ", hv);
 
     // 등장액션 대상 위치값 리턴 함수
     const retVal = (ele) => ele.getBoundingClientRect().top;
@@ -39,15 +31,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // 스크롤 액션 세팅하기
     window.addEventListener("scroll", () => {
-        // // 현재스크롤 위치 이동값
-        // let scTop = window.scrollY;
-        // // 이동비율
-        // let perSc = Math.floor((scTop / totalSc) * 100);
-        // // console.log("위치:",scTop," | 비율:",perSc);
-
-        // // 바크기 업데이트
-        // bar.style.height = perSc + "%";
-
         // pl들에 스크롤 액션 함수 적용하기
         for (let x of tg) showIt(x);
 
@@ -55,10 +38,6 @@ window.addEventListener("DOMContentLoaded", () => {
         let tgpos = retVal(tg[0]);
         // console.log(tgpos);
 
-        // if(tgpos < 기준점->hv!){
-        // : 근데 이렇게 한계를 하나만 주지 않고, 구간으로 준다
-        // 예) if(tgpos < hv && tgpos > 0){
-        // : 이렇게 구간으로 잡아주는게 더 좋다
         if (tgpos < hv && tgpos > 0) {
             // console.log("작동!!");
 
@@ -73,15 +52,12 @@ window.addEventListener("DOMContentLoaded", () => {
     function zigzagFn(){
         const plLists = document.querySelectorAll(".programList li");
         // console.log(plLists);
-        // console.log(plLists.item(1));
         if(window.innerWidth <= 1100){
             plLists.forEach((ele, idx)=>{
                 if(idx % 2 === 0){
-                    // ele.style.position="relative";
                     ele.style.transform="translateX(15%)";
                 }
                 else{
-                    // ele.style.position="relative";
                     ele.style.transform="translateX(-15%)";
                 }
             })
@@ -142,8 +118,6 @@ window.addEventListener("DOMContentLoaded", () => {
         window.addEventListener("scroll", hScrollFn);
     }
 
-    // window.addEventListener("scroll", hScrollFn);
-
     // getBoundingClientRect() 값을 리턴받기
     const retRectVal = (x) => x.getBoundingClientRect().top;
 
@@ -156,7 +130,7 @@ window.addEventListener("DOMContentLoaded", () => {
         let tgpos = retRectVal(hScrollBx);
         // console.log("바운딩값: ", tgpos);
 
-        // 적용구간 설정하기 : 200이하 -3000px 이상!
+        // 적용구간 설정하기 : 200이하 -3000px 이상
         if (tgpos <= 0 && tgpos >= -3000) {
             moveBx.style.left = tgpos + "px";
         } else if (tgpos > 0) {
@@ -165,9 +139,10 @@ window.addEventListener("DOMContentLoaded", () => {
     } //////////////// hScrollFn 끝 /////////////////
 
 
+
+
     /******************************* 지도 섹션 배경 상단의 svg 변경 함수 *******************************/
-    // 기능 : 스크롤바(scrollY가 3066부터 4000까지...ㅠㅠ)가 특정 위치에 오면 지도 섹션의 배경 상단에 있는 svg의 scaleY속성이 0.1에서부터 1까지 변화함
-    //
+    // 기능 : 스크롤바가 특정 위치에 오면 지도 섹션의 배경 상단에 있는 svg의 scaleY속성이 0.1에서부터 1까지 변화함
     // 변경 대상 : .circleStart>svg
     const svgScale = document.querySelector(".circleStart>svg");
     const winH = window.innerHeight;
@@ -181,8 +156,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
         if (chkPos < winH && chkPos > 0) {
             // console.log(chkPos);
-            // 계산법 : 1 - 바운딩수 / 전체높이
-            // 1~0까지 계산 되므로 반대수치는 1에서 빼면 된다!
             let ratio = 1 - chkPos / winH;
             // console.log(ratio);
             svgScale.style.transform = `scale(1,${ratio})`;
@@ -197,9 +170,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     /*********************** 셰프&바텐더 소개 섹션의 스크롤 액션 ***********************/
     // 기능 : 셰프&바텐더 소개 섹션에 진입하기 전에는 셰프 이미지가 translateX(110%)이었다가, 스크롤되어 특정 위치 진입하면 translateX(0%)이 되어서 왼쪽에서 등장하도록 만들기
-    // 변경 대상 : .introList img들
-    // 이벤트 종류 : 스크롤 이벤트
-    // 이벤트 적용할 대상 : .CnBIntro .rside (rside박스 안에 .introList가 있음)
     const CnBIntroImgs = document.querySelectorAll(".introList img");
     const CnBIntroInRside = document.querySelector(".CnBIntro .rside");
     // console.log(CnBIntroImgs);
@@ -212,9 +182,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const totalHv = window.innerHeight;
     // console.log("화면의 높이값: ", totalHv);
 
-    // 등장액션 대상 위치값 리턴 함수 -> retVal에 담겨있음
-
-    // 함수 만들기
     function introFn() {
         // console.log("스크롤 중!");
 
@@ -238,13 +205,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     /******************************* 셰프&바텐더 소개 섹션의 셰프이미지 마우스오버 함수 *******************************/
     // 기능 : 클래스 on을 주어서! 셰프 이미지에 마우스오버하면 more 글씨가 나타나며 이미지가 조금 어두워진다!
-    // 이벤트 대상 : .introList .stageBx>img
-    // 이벤트 종류 : mouseenter, mouseleave 이벤트
-    // 변경 대상 : .moreContMoveBx 
-    // const CnBIntro_img = document.querySelectorAll(".introList .stageBx>img");
     const CnBIntro_img = document.querySelectorAll(".introList>ul>li>a");
     const CnBIntro_moveMorBx = document.querySelectorAll(".moreContMoveBx");
-    
     // console.log(CnBIntro_moveMorBx);
 
     // 이벤트 함수 만들기 : 마우스엔터시
@@ -257,16 +219,14 @@ window.addEventListener("DOMContentLoaded", () => {
             return;
         } //////////////////////// if : 인덱스번호 5번인 경우 ////////////////////////
         else{
-            // data-ap가 1이면, 가져온 순번에 맞는 .moreContMoveBx를 찾아서 거기에 클래스 .on을 부여하기 (0이면 부여하면 안됨!)
             if(img_data_ap.getAttribute("data-ap") === "1"){
                 // console.log("data-ap값은?: ", ele.querySelector("img").getAttribute("data-ap"));
                 CnBIntro_moveMorBx[seq].classList.add("on");
             }
         } //////////////////// else : 그밖에 나머지인 경우 //////////////////////////
-
-
     } ////////////////// mouseEnterFn 함수 ///////////////////////
 
+    
     // 이벤트 함수 만들기 : 마우스리브시
     function mouseLeaveFn(ele, seq){
         // console.log("more 등장하게 만들기!", seq);
@@ -279,7 +239,6 @@ window.addEventListener("DOMContentLoaded", () => {
     } ////////////////// mouseLeaveFn 함수 ///////////////////////
 
     // 이벤트 적용하기
-    // 맨처음 1초동안은 이미지가 왼쪽에서 오른쪽으로 등장하는데 시간이 걸리기 때문에, 1초가 지난 후부터 마우스오버 액션이 적용되면 좋겠음
     CnBIntro_img.forEach((ele, idx)=>{
         ele.addEventListener("mouseover", ()=>{mouseEnterFn(ele, idx)});
         ele.addEventListener("mouseout", ()=>{mouseLeaveFn(ele, idx)});
@@ -288,9 +247,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     /******************************* 동영상 좌/우 버튼 클릭시 동영상 넘어가는 함수 *******************************/
     // 기능 : 좌/우 버튼 클릭하면 동영상 영상이 바뀜
-    // 이벤트 적용 대상 : .prebtn img, .nextbtn img
-    // 변경 대상 : .vArea iframe
-    // 이벤트 종류 : click 이벤트
     const prebtn = document.querySelector(".vArea .prebtn img");
     const nextbtn = document.querySelector(".vArea .nextbtn img");
     const screen = document.querySelector(".vArea iframe");
@@ -335,9 +291,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     /******************************* 동영상 썸네일 클릭시 해당 동영상으로 바뀌는 함수 *******************************/
     // 기능 : 동영상 목록에 있는 썸네일을 클릭하면, 해당 동영상으로 바뀐다
-    // 이벤트 적용 대상 : . videoList li img들
-    // 변경 대상 : .vArea iframe -> screen
-    // 이벤트 종류 : 클릭 이벤트
     const thumbnailImg = document.querySelectorAll(".videoList li img");
 
     thumbnailImg.forEach((ele, idx) => {
@@ -359,9 +312,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     /******************************* 동영상 썸네일 목록 아래의 좌/우 버튼 클릭시 썸네일 목록 이동되는 함수 *******************************/
     // 기능 : 썸네일 목록 아래의 이전/다음 버튼을 클릭하면, 리스트 박스 내의 썸네일이 한개씩 좌우로 이동된다
-    // 이벤트 적용 대상 : .movebtn아래의 divd img들
-    // 변경 대상 : .videoList박스 li img들
-    // 이벤트 종류 : 클릭 이벤트
     const thumbnailbtns = document.querySelectorAll(".movebtn div img");
     // console.log(thumbnailbtns);
     let clickNum = 0;
