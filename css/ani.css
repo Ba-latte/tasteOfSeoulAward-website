@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* 애니메이션 CSS - ani.css */
+
+
+
+/* 움직이는 애니메이션 클래스 - 세로방향 */
+.mvc1{
+    animation: mvcAni1 3s linear infinite alternate;
+}
+/* 움직이는 애니메이션 클래스 - 가로방향 */
+.mvc2{
+    animation: mvcAni2 3s linear infinite alternate;
+}
+
+
+/* 움직이는 원 키프레임 - 세로 */
+@keyframes mvcAni1 {
+    from{
+        transform: translateY(10px);
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}
+/* 움직이는 원 키프레임 - 가로 */
+@keyframes mvcAni2 {
+    from{
+        transform: translateX(10px);
+    }
+    to{
+        transform: translateX(-10px);
+    }
+}
+
+
+
+/* 메인 페이지 회전 키프레임 - 시계방향 */
+@keyframes ratation1 {
+    from{
+        transform: rotate(0deg) translateX(80px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) translateX(80px) rotate(-360deg);
+    }
+} /* rotation 키프레임 끝 */
+
+
+/* 메인 페이지 회전 키프레임 - 반시계방향 */
+@keyframes ratation2 {
+    from{
+        transform: rotate(360deg) translateX(200px) rotate(0deg);
+    }
+    to{
+        transform: rotate(0deg) translateX(200px) rotate(-360deg);
+    }
+} /* rotation 키프레임 끝 */

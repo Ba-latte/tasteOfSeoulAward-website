@@ -1,0 +1,739 @@
+@charset "utf-8";
+
+/* 미디어쿼리 CSS - media.css */
+
+
+/* 1500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1500px) {
+    /* top버튼 */
+    .pageTopBtn{
+        bottom: 10%;
+        right: 2%;
+    }
+}
+/* 1500px 사이즈 이하 미디어쿼리 끝 */
+
+/* 1400px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1400px) {
+    /* 5페이지 메인 동영상 */
+    /* 비디오 썸네일 리스트 */
+    .videoList{
+        transform: translate(-50%) scale(1.6);
+        margin-bottom: 5vh;
+    }
+    /* 하단영역 - 사이트 정보 */
+    address span:nth-child(1) {
+        font-size: 1.7vw;
+    }
+    address {
+        font-size: 1.2vw;
+    }
+    address {
+        font-size: 1.2vw;
+        font-size: 1vw;
+    }
+
+    /* 하단영역 - 정책 */
+    .policy ul {
+        gap: 5px;
+        flex-direction: column;
+    }
+}
+/* 1400px 사이즈 이하 미디어쿼리 끝 */
+
+/* 1200px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1200px) {
+    /* 3페이지 지도 섹션 */
+    /* 첫번째 슬라이드의 제목 */
+    .circleMainTxt p:first-child {
+        font-size: 10vh;
+    }
+    /* 첫번째 슬라이드의 문구 */
+    .circleMainTxt p:nth-of-type(2) {
+        font-size: 3vh;
+    }
+    /* 2,3번째 슬라이드 지도 겉박스 */
+    .mapScreen{
+        width: 80vw;
+    }
+    /* 4페이지 셰프와 바텐더 소개 - 왼쪽단 */
+    /* 제목 */
+    .fixedArea h3 {
+        white-space: normal;
+        font-size: 2.3vw;
+    }
+    /* 본문 */
+    .fixedArea p {
+        font-size: 1.8vw;
+    }
+    
+}
+/* 1200px 사이즈 이하 미디어쿼리 끝 */
+
+/* 1100px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1100px) {
+    /* top버튼 */
+    .pageTopBtn {
+        bottom: 10%;
+        right: 4%;
+    }
+    /* 사이트맵 */
+    .siteMap {
+        /* z-index: 999; */
+        /* 다른 요소들보다 제일 위에 위치 */
+    }
+    .siteMap .close{
+        margin-top: 5vh;
+    }
+    /* 사이트맵 상위 메뉴 */
+    .siteMap ul{
+        flex-direction: column;
+        gap: 1.5vh;
+    }
+    /* more/less 아이콘 */
+    .expandMore{
+        display: inline;
+        font-size: 4vh;
+        vertical-align: middle;
+    }
+    /* 사이트맵 하위 메뉴 겉박스 */
+    .siteMap ul .smenu{
+        margin-top: auto;
+        height: 0;
+        overflow: hidden;
+    }
+    /* 사이트맵 하위메뉴 li */
+    .siteMap ol li{
+        padding: 0;
+    }
+    /* 사이트맵 하위메뉴 a요소 확장 */
+    .siteMap .smenu li a{
+        display: inline-block;
+        padding-top: 10px;
+    }
+    /* 사이트맵 마우스 따라다니는 트랙,바 숨기기 */
+    .siteMap .barTrack, .siteMap .bar{
+        display: none;
+    }
+    /* 사이트맵의 하위메뉴 */
+    .siteMap .smenu{
+        opacity: 0;
+        transition: 
+        height .4s ease-in-out,
+        opacity .4s ease-in-out;
+    }
+
+
+    /* 1페이지 메인 화면 */
+    /* 메인 타이틀 */
+    .main h1 {
+        font-size: 8rem;
+        top: 18vh;
+    }
+    /* 메인 문구(기간) */
+    .main h3 {
+        top: 82vh;
+        font-size: 5rem;
+    }
+
+    /* 2페이지 주요 프로그램 소개 */
+    .programList {
+        margin-top: 10vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10vw;
+    }
+    .programList li.pl {
+        position: static;
+    }
+
+    /* 주요 프로그램 소개 - 배경 원 개별 세팅 */
+    .cr5 {
+        top: 24vh;
+        left: 80vw;
+    }
+    .cr6 {
+        top: 106vh;
+        left: 9vw;
+    }
+    .cr7 {
+        top: 72vh;
+        left: 19vw;
+    }
+    .cr8 {
+        top: 144vh;
+        left: 77vw;
+    }
+    .cr9 {
+        top: 186vh;
+        left: 10vw;
+    }
+    .cr10 {
+        top: 213vh;
+        left: 76vw;
+    }
+    .cr11 {
+        top: 266vh;
+        left: 6vw;
+    }
+
+    /* 3페이지 지도 섹션 */
+    /* 🌈원형배너 가로스크롤 위한 겉박스 */
+    .circleBody {
+        height: auto;
+        margin: 0;
+        padding: 0;
+        /* outline: 2px dashed lime; */
+    }
+    /* 🌈원형배너 가로스크롤 위한 속박스 */
+    .hScrollTgBx {
+        position: static;
+        height: auto;
+
+        background-color: #fef7e6;
+    }
+    /* 🌈원형배너 실제로 가로이동할 박스(가로스크롤 위한 속박스 바로 아래에 있는 박스들) */
+    .hScrollTgBx ul {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* 🌈가로이동하는 li들 공통 세팅 */
+    .hScrollTgBx ul li {
+        background-color: #fef7e6;
+        font-size: 1vw;
+        color: #333;
+    }
+    /* 첫번째 슬라이드 li의 자식요소들 중앙 정렬 위한 세팅 */
+    .circleMainTxt{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hScrollTgBx ul li ol {
+        display: flex;
+        margin-top: 5vh;
+        justify-content: center;
+        gap: 5vh;
+    }
+    /* 마지막 슬라이드 중앙 정렬하기 */
+    .hScrollTgBx ul > li:last-child {
+        padding: 12vh;
+    }
+
+    /* 4페이지 셰프와 바텐더 소개 */
+    /* 왼쪽단 */
+    .CnBIntro .lside {
+        top: 15vh;
+    }
+
+    /* 하단영역 */
+    /* 하단영역 - 속박스 */
+    .info {
+        padding: 3vw;
+        height: auto;
+        flex-direction: column;
+    }
+    /* 하단 로고 */
+    .logo {
+        margin: 1vw;
+    }
+    /* 하단 사이트 정보 */
+    address {
+        margin-bottom: 2vw;
+    }
+    /* 하단 SNS */
+    .sns {
+        gap: 1vw;
+    }
+    /* 하단 정책 ul */
+    .policy ul {
+        flex-direction: row;
+        gap: 1vw;
+    }
+    /* 하단 정책 링크 */
+    .blink {
+        width: auto;
+    }
+}
+/* 1100px 사이즈 이하 미디어쿼리 끝 */
+
+/* 960px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 960px) {
+    /* 3페이지 지도 섹션 */
+    .circleStart {
+        transform: translateY(-93%);
+    }
+    /* 4페이지 셰프&바텐더 소개 섹션 */
+    .CnBIntro .secTitle {
+        height: 23vh;
+    }
+}
+/* 960px 사이즈 이하 미디어쿼리 끝 */
+
+/* 850px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 850px) {
+    /* 메인 페이지 - 회전 원(보라색) */
+    .cont .main .wrap h3::before {
+        left: -40vw;
+    }
+
+    /* 3페이지 지도 섹션 */
+    /* 2,3번째 슬라이드 공통 세팅 */
+    .hScrollTgBx ul > li + li {
+        font-size: 4.5vh;
+        font-weight: bold;
+    }
+
+    /* 4페이지 셰프와 바텐더 소개 */
+    .CnBIntro .stkBox {
+        flex-direction: column;
+        align-items: center;
+    }
+    .CnBIntro .lside {
+        width: auto;
+        height: 75vh;
+        position: relative;
+        top: 0;
+        padding: 5vw;
+    }
+
+    .fixedArea h3 {
+        padding-top: 30%;
+        font-size: 4.3vw;
+    }
+
+    .fixedArea p {
+        font-size: 2vw;
+    }
+
+    .CnBIntro .rside {
+        width: 100%;
+    }
+
+    .CnBIntro .introList {
+        margin-top: 20%;
+    }
+
+    .CnBIntro .rside .introList ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .CnBIntro .introList li {
+        margin-bottom: 20%;
+    }
+
+    .CnBIntro .introList li p {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .CnBIntro .introList img {
+        width: 100%;
+    }
+
+    /* 5페이지 메인 동영상 */
+    /* 메인 동영상 아이프레임 */
+    .vArea iframe {
+        margin: 35px;
+    }
+    /* 썸네일 리스트 */
+    .videoList {
+        margin-bottom: 4vh;
+    }
+
+    /* 6페이지 공지사항 */
+    /* 겉박스 */
+    .NnPSection {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* 양쪽 단 공통 세팅 */
+    .NnPSection aside {
+        padding: 10%;
+    }
+
+
+}
+/* 850px 사이즈 이하 미디어쿼리 끝 */
+
+/* 700px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 700px) {
+    /* 3페이지 지도 섹션 */
+    .circleMainTxt p:first-child{
+        padding: 5vh 3vh 3vh;
+    }
+    /* 슬라이드 공통 세팅 */
+    .hScrollTgBx ul li{
+        flex: auto;
+    }
+    /* 1번째 슬라이드 세팅 */
+    .circleMainTxt{
+        height: 80vh;
+    }
+    /* 2,3번째 슬라이드 공통세팅 */
+    .hScrollTgBx ul > li + li{
+        padding: 10vh;
+    }
+    /* 마지막 슬라이드 */
+    .hScrollTgBx ul > li:last-child {
+        padding: 10vh;
+    }
+    .vegetarian50Btn{
+        margin-bottom: 15vh;
+    }
+    /* slidePg의 맵 아이콘 지우기 */
+    .slidePg .mapIcon{
+        display: none;
+    }
+    .hScrollTgBx > ul > li > ol > li a{
+        transform: translate(0);
+        font-size: 14px;
+    }
+    /* 4페이지 셰프와 바텐더 소개 섹션 */
+    /* 소개 문구 있는 단락 */
+    .CnBIntro .lside{
+        height: 68%;
+    }
+
+    /* 6페이지 공지사항과 보도자료 */
+    .NnPSection .rside{
+        margin-bottom: 20vh;
+    }
+}
+/* 700px 사이즈 이하 미디어쿼리 끝 */
+
+/* 650px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 650px) {
+    /* 상단영역 */
+    /* 상단영역 기타메뉴 */
+    .topArea .etc ul {
+        gap: 2vh;
+    }
+
+    .topArea .etc ul > li:nth-child(1) {
+        margin-right: 0px;
+    }
+
+    /* 3페이지 지도 섹션 */
+    /* 섹션의 동그란 svg */
+    .circleStart {
+        transform: translateY(-90%);
+    }
+    .circleMainTxt{
+        justify-content: center;
+    }
+    /* 첫번째 슬라이드 - 타이틀 */
+    .circleMainTxt p:first-child {
+        font-size: 5vh;
+        width: auto;
+        padding: 2vh;
+    }
+    /* 부제목 */
+    .circleMainTxt p:nth-of-type(2) {
+        font-size: 1.6vh;
+    }
+
+
+    /* 4페이지 셰프와 바텐더 소개 */
+    /* 타이틀 */
+    .CnBIntro .secTitle {
+        font-size: 3rem;
+        background-size: cover;
+        line-height: 5;
+    }
+    /* 고정되는 박스(왼쪽단) */
+    .CnBIntro .fixedArea h3 {
+        font-size: 4.8vw;
+    }
+    .CnBIntro .fixedArea p {
+        font-size: 3vw;
+    }
+    /* 5페이지 메인 동영상 */
+    /* 5페이지 메인동영상의 좌/우버튼 */
+    .vSection .vArea>div{
+        display: none;
+    }
+    /* 메인 동영상 아이프레임 */
+    .vArea iframe {
+        margin: 0 0 4vh;
+    }
+
+    /* 6페이지 공지사항과 보도자료 */
+    /* 양쪽단 공통 세팅 */
+    .NnPSection aside ol {
+        flex-direction: column;
+    }
+    .NnPSection aside ol li {
+        margin: 3vw;
+        /* height: auto; */
+    }
+    .NnPSection li a {
+        height: auto;
+    }
+    /* 공지사항 (오른쪽단) */
+    .NnPSection .lside .notice h4 {
+        /* width: 100%; */
+    }
+    /* 보도자료 (왼쪽단) */
+    .NnPSection .rside {
+        margin-bottom: 20%;
+    }
+
+    /* 하단영역 */
+    /* 하단영역 겉박스 */
+    footer.info {
+        padding: 10vw 0;
+        gap: 1vh;
+    }
+    /* 하단 사이트 정보 */
+    .info address {
+        font-size: 2.3vw;
+    }
+    /* 하단 사이트 정보 - 타이틀 */
+    address span:nth-child(1) {
+        font-size: 3vw;
+        margin-right: 10px;
+    }
+}
+/* 650px 사이즈 이하 미디어쿼리 끝 */
+
+/* 600px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 600px) {
+    /* 2페이지 주요 프로그램 소개 */
+    /* 배경 원 공통 세팅 */
+    .program .circle {
+        z-index: -1;
+    }
+    /* 5페이지 메인 동영상 */
+    /* 섹션 타이틀 */
+    .cont .vSection .secTitle5 {
+        font-size: 3rem;
+    }
+    .program .circleList .cr5 {
+        left: auto;
+        right: 5vw;
+    }
+    .program .circleList .cr8 {
+        top: 148vh;
+        left: auto;
+        right: 8vw;
+    }
+    .program .circleList .cr10 {
+        left: auto;
+        right: 5vw;
+        top: 226vh;
+    }
+}
+/* 600px 사이즈 이하 미디어쿼리 끝 */
+
+/* 550px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 550px) {
+    /* 상단 영역 */
+    .top .topArea {
+        padding: 2vh 3vw;
+    }
+    .top .topArea .etc ul {
+        gap: 2vw;
+    }
+    /* top버튼 - 사라지게 만들기 */
+    .pageTopBtn{
+        display: none;
+    }
+    /* 3페이지 지도 섹션 */
+    /* 첫번째 슬라이드 - 타이틀 */
+    .circleMainTxt p:first-child {
+        font-size: 5vh;
+        width: auto;
+        padding: 2vh;
+    }
+    /* 부제목 */
+    .circleMainTxt p:nth-of-type(2) {
+        font-size: 20px;
+        padding: 25px;
+    }
+    /* 2,3번째 슬라이드 공통 세팅 */
+    .hScrollTgBx ul > li + li {
+        font-size: 3vh;
+    }
+    /* 지도 버튼 세팅 */
+    .tasteofseoul100Btn a{
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    /* 5페이지 메인 동영상 썸네일 리스트 좌/우버튼 */
+    .vSection .movebtn {
+        margin: 30px 10vw 10vh;
+        gap: 40vw;
+    }
+}
+/* 550px 사이즈 이하 미디어쿼리 끝 */
+
+/* 480px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 480px) {
+    /* 상단영역 */
+    /* 로고 이미지 */
+    .topArea .logo img {
+        width: 80%;
+    }
+    /* 로고 주변 원 이미지 */
+    .topArea .logo .circleList .circle {
+        width: 2vh;
+        height: 2vh;
+    }
+    .logo .circleList .cr2 {
+        left: 20%;
+    }
+    .logo .circleList .cr3 {
+        left: 57%;
+    }
+    .logo .circleList .cr4 {
+        left: 75%;
+    }
+
+    /* 사이트맵 */
+    /* 사이트맵 닫기 버튼 */
+    .siteMap .close {
+        height: auto;
+    }
+    /* 사이트맵 타이틀 */
+    .siteMap h2 {
+        font-size: 4vh;
+        padding: 2vh 0;
+        margin: 20px 20px 10px;
+    }
+    /* 사이트맵 ul 공통 */
+    .siteMap ul {
+        font-size: 3vh;
+    }
+    /* 사이트맵 ul li 공통 */
+    .smenu ol li {
+        font-size: 2vh;
+    }
+
+
+    /* 메인 페이지 */
+    /* 타이틀 */
+    .main .wrap h1 {
+        font-size: 7vh;
+    }
+    .main h1::before {
+        width: 35px;
+        height: 35px;
+        top: 15vh;
+    }
+    .main h1::after {
+        width: 40px;
+        height: 40px;
+        top: 27vh;
+        left: 11vh;
+    }
+    /* 메인 문구(기간) */
+    .main .wrap h3 {
+        font-size: 4vh;
+    }
+
+    /* 2페이지 주요 프로그램 소개 */
+    /* 프로그램 섹션 타이틀 */
+    .program .secTitle{
+        font-size: 3vh;
+    }
+    /* 프로그램 섹션 슬로건(문구) */
+    .program .secSlogan {
+        font-size: 1.8vh;
+    }
+    /* 프로그램 이미지 리스트 */
+    .program .programList{
+        margin-top: 20vw;
+        gap: 18vh;
+    }
+    /* 프로그램 이미지 */
+    .program .programList .pl img{
+        width: 22vh;
+    }
+
+    /* 3페이지 지도 섹션 */
+    /* svg부분 */
+    .circleStart {
+        transform: translateY(-88%);
+    }
+    /* 2번째 슬라이드 */
+    .hScrollTgBx ul > li + li{
+        padding: 5vh 0;
+    }
+    /* 3번째 슬라이드 */
+    .hScrollTgBx ul > li:last-child{
+        padding: 5vh 0;
+    }
+
+    /* 4페이지 셰프와 바텐더 소개 */
+    /* 섹션 타이틀 */
+    .CnBIntro .secTitle h2{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        line-height: 1;
+    }
+    .CnBIntro .stkBox .lside {
+        height: 60vh;
+    }
+    /* 타이틀 */
+    .CnBIntro .fixedArea h3 {
+        font-size: 4.5vw;
+    }
+    /* 소개글 */
+    .CnBIntro .fixedArea p {
+        font-size: 3.5vw;
+    }
+    /* 5페이지 메인 동영상 */
+    .cont .vSection .secTitle5 {
+        font-size: 3vh;
+    }
+    /* 6페이지 공지사항과 보도자료 */
+    .NnPSection .NnPMenu{
+        font-size: 7vw;
+    }
+
+    /* 하단영역 */
+    .info .addr {
+        width: 85vw;
+        text-align: center;
+    }
+}
+/* 480px 사이즈 이하 미디어쿼리 끝 */
+
+/* 400px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 400px) {
+    /* 3페이지 지도 섹션 */
+    .circleStart {
+        transform: translateY(-80%);
+    }
+    /* 5페이지 동영상 섹션 */
+    .cont .vSection .secTitle5 {
+        font-size: 5.5vw;
+    }
+}
+/* 400px 사이즈 이하 미디어쿼리 끝 */
+
+
+/* 380px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 380px) {
+    /* 3페이지 지도 섹션 */
+    .circleMainTxt p:nth-of-type(2) {
+        font-size: 20px;
+    }
+    /* 3페이지 지도 섹션의 지도 버튼들 공통 세팅 */
+    .hScrollTgBx ul li ol{
+        gap: 0;
+    }
+    /* 3페이지 지도 섹션의 3번째 슬라이드 (채식) */
+    .vegetarian50Btn{
+        width: 100vw;
+    }
+}
+/* 380px 사이즈 이하 미디어쿼리 끝 */
+

@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* 서울미식주간 서브 페이지 CSS - sub_eventInfo.css */
+/* 서브 페이지 - 행사 소개 */
+
+/************************************* 2. 메인 영역  *************************************/
+header.eventInfo{
+    width: 100%;
+    margin-top: 15vh;
+
+    font-size: 2vh;
+    font-weight: normal;
+}
+
+
+
+
+
+
+/* 섹션 컨텐츠 첫번째 단락 */
+.eventInfo .sectionContBx p:nth-child(1).sec_eventInfoParagraph{
+    /* text-align: center; */
+    font-size: 7vw;
+    font-weight: bolder;
+    color: #000;
+}
+.eventInfo .sectionContBx p:nth-child(1)>span{
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: url(../../assets/images/02.서브페이지-22년행사및주요프로그램소개이미지/eventInfo01.png);
+    background-position: center left;
+}
+/* 섹션 컨텐츠 두번째단락부터 이미지까지 묶음 */
+.sectionContBx>.sec_eventInfo_ul{
+    display: flex;
+    margin-top: 100px;
+    padding: 0 2vw 1vh;
+}
+/* 마지막 단락 */
+.eventInfo .sectionContBx p:last-child{
+    margin-bottom: 5vh;
+}
+
+
+
+/* 두번째 단락 */
+.eventInfo .sectionContBx p:nth-child(2){
+    /* margin-top: 5vh; */
+}
+/* 두번째~ 마지막 단락 공통 세팅 */
+.eventInfo .sectionContBx p + p{
+    /* width: 30vw; */
+    /* line-height: 1.7; */
+}
+/* 이미지 세팅 */
+.eventInfo .sectionContBx .sectionContImg{
+    /* position: relative; */
+    width: 20vw;
+    /* height: 50vh; */
+    height: 100%;
+    /* bottom: 15vh; */
+    /* right: 15%; */
+    background: url(../../assets/images/02.서브페이지-22년행사및주요프로그램소개이미지/eventInfo01.png) no-repeat bottom/cover;
+}
+
+
+
+
+
+/*********************************** 미디어 쿼리 ***********************************/
+
+
+/* 800px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 800px) {
+    .sectionContBx>.sec_eventInfo_ul{
+        flex-direction: column;
+    }
+        
+    .eventInfo .sectionContBx .sectionContImg{
+        margin: 0 auto;
+        width: 100%;
+        height: 35vh;
+    }
+} /* 800px 사이즈 이하 미디어쿼리 끝 */
+
+/* 600px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 600px) {
+    .sectionContBx>.sec_eventInfo_ul{
+        margin-top: 45px;
+    }
+
+} /* 600px 사이즈 이하 미디어쿼리 끝 */
+
+/* 400px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 400px) {
+    .sectionTitBx{
+        margin: 4vh;
+    }
+    .eventInfo .sectionContBx p:nth-child(1).sec_eventInfoParagraph{
+        font-size: 10vw;
+    }
+} /* 400px 사이즈 이하 미디어쿼리 끝 */

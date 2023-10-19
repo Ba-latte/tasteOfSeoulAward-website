@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* 서울미식주간 서브 페이지 CSS - sub_tasteOfSeoulAward.css */
+/* 서브 페이지 - 테이스트오브서울 어워즈 */
+
+/************************************* 2. 메인 영역  *************************************/
+
+/* 주된 컨텐츠 소개(상세) */
+/* 글 단락 */
+.categoryTxtBx>p{
+    margin: 10vh 5vh;
+    text-align: center;
+    
+    font-size: 2vh;
+    line-height: 1.8;
+}
+/* 이미지 단락 */
+.categoryTxtBx>.imgBx{
+    height: 40vh;
+    margin-bottom: 10vh;
+    background-image: url(../../assets/images/02.서브페이지-22년행사및주요프로그램소개이미지/eventInfo02.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/******************************* 미디어쿼리 *******************************/
+/* 1500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1500px) {
+} /* 1500px 사이즈 이하 미디어쿼리 끝 */
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {
+    .programPageLnb>ul{
+        flex-direction: column;
+    }
+} /* 500px 사이즈 이하 미디어쿼리 끝 */
+
