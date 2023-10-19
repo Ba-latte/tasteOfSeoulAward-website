@@ -1,0 +1,15 @@
+[ 폰트 ]
+
+1. 대소문자 폰트
+Rajdhani
+https://fonts.google.com/specimen/Rajdhani?preview.text=Taste%20of%20Seoul&preview.text_type=custom
+
+2. 대문자로만 된 글자 폰트
+Julius Sans One
+https://fonts.google.com/specimen/Julius+Sans+One?preview.text=Taste%20of%20Seoul&preview.text_type=custom
+
+3. 한글 폰트
+Noto Sans KR (혹은 Noto Sans Korean)
+https://fonts.google.com/noto/specimen/Noto+Sans+KR?preview.text=Taste%20of%20Seoul&preview.text_type=custom&query=noto
+
+

@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* 서울미식주간 서브 페이지 CSS - sub_PrivacyPolicy.css */
+/* 서브 페이지 - 개인정보처리방침 */
+
+
+header.privacyPolicySection{
+    margin-top: 15vh;
+}
+.policybox{
+    color: #666;
+    font-size: 14px;
+}
+.policybox>.ibx{
+    padding: 10vh;
+}
+.agr-tit1 {
+    display: block;
+    margin: 30px 0 20px 0;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    background: #f7f7f7;
+    padding: 12px;
+    padding-left: 30px;
+    border-bottom: 1px solid #ddd;
+    border-left: 3px solid #ddd;
+}
+.agr-tit2 {
+    display: block;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+.agr-tit3 {
+    display: block;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+
+

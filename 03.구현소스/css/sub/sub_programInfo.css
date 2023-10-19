@@ -1,0 +1,225 @@
+@charset "utf-8";
+/* 서울미식주간 서브 페이지 CSS - sub_eventInfo.css */
+/* 서브 페이지 - 행사 소개 */
+
+/************************************* 2. 메인 영역  *************************************/
+header.programInfo{
+    width: 100%;
+    margin-top: 15vh;
+
+    font-size: 2vh;
+    font-weight: normal;
+}
+
+/* 섹션 컨텐츠 겉박스 */
+.programInfo .sectionContBx{
+    padding: 10vh;
+}
+
+/* 섹션 컨텐츠 단락 */
+.programInfo .sectionContBx p{
+    padding: 1vh 5vh;
+    color: #2e2e2e;
+    font-size: 2vh;
+    text-align: center;
+    word-break: keep-all;
+}
+.programInfo .sectionContBx p:first-child{
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+/* 프로그램소개 배너 불릿 */
+.programLnb{
+    padding: 0 10vh 10vh;
+}
+.programLnb ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.programLnb li:hover a{
+    color: #b5416e;
+}
+.programLnb li+li::before{
+    content: '';
+    display: inline-block;
+    /* position: relative; */
+    width: 8px;
+    height: 8px;
+    background-color: #a5a5a5;
+    border-radius: 50%;
+    /* top: 0; */
+    /* left: 0; */
+    transform: translateY(-30%);
+}
+.programLnb li a{
+    color: #a5a5a5;
+    font-weight: normal;
+}
+/* 슬라이드 배너와 불릿 연결하기 */
+.programLnb>.indic a.on{
+    color: #b5416e;
+    font-weight: bold;
+}
+
+
+
+
+/* 배너 전체 박스 */
+.banbx{
+    position: relative;
+    /* 부모자격 .abtn */
+    /* background: paleturquoise; */
+
+    padding: 0 10vh 10vh;
+    margin-bottom: 20vh;
+}
+
+/* 배너 컨텐츠 박스 */
+.bancont {
+    position: relative;
+    /* 부모자격 - 슬라이드 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
+    aspect-ratio: 94/44;
+    box-sizing: border-box;
+
+    /* outline: 5px dotted blue; */
+}
+/* ul.슬라이드 */
+.slide {
+    display: flex;
+    /* 플렉스박스!!! */
+    gap: 0 5vw;
+    /* 양쪽간격 5vw */
+
+    /*사진을 싸고 있는 슬라이드*/
+    position: absolute;
+    top: 0;
+    left: -220%;
+    /* 2장의 앞쪽에 나가있음!
+    원래는 -200%지만 가로폭 5%가 
+    양쪽 셋팅되어서 10%를 두번 더해서
+    220%임 -> 하나당 110%  */
+    width: 100%;
+    height: 100%;
+
+    /* outline: 5px solid red; */
+}
+
+.slide li {
+    flex-shrink: 0;
+    /* 부모박스크기만큼 줄어들지 않음 -> 0 */
+    flex-basis: 100%;
+    /* 가로크기를 부모박스 크기에 맞춤! */
+
+    /* outline: 2px dashed red; */
+    transform: scale(0.8);
+
+    /* 박스 그림자 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+
+    /* 트랜지션 */
+    transition: 0.4s;
+}
+/* 3번째가 주인공이므로 원래밝기로 조금 크게변경! */
+.slide li:nth-child(3) {
+    transform: scale(1.1);
+}
+.slide li img {
+    /*이미지는 박스에 맞춤!*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 이미지 비율유지 채우기! */
+}
+
+/*이동버튼*/
+.abtn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    text-align: center;
+    /* box-shadow: 0px 2px 2px #00000096; */
+    
+    /* outline: 1px solid red; */
+}
+
+/*왼쪽버튼*/
+.ab1{
+    left: 5%;
+}
+.ab1 .material-symbols-outlined{
+    display: inline-block;
+    color: #2e2e2e;
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: -1.4vh;
+}
+
+/*오른쪽버튼*/
+.ab2{
+    right: 5%;
+}
+.ab2 .material-symbols-outlined{
+    display: inline-block;
+    color: #2e2e2e;
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: -1.4vh;
+}
+
+
+
+/* 1700px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1700px) {
+    .banbx{
+        margin: 0 4vw 10vw;
+    }
+}
+/* 1700px 사이즈 이하 미디어쿼리 끝 */
+
+/* 1600px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1600px) {
+    .banbx{
+        margin: 0 7vw 10vw;
+    }
+}
+/* 1600px 사이즈 이하 미디어쿼리 끝 */
+
+/* 1550px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1550px) {
+    .abtn{
+        top: 100%;
+    }
+    .ab1{
+        left: 18%;
+    }
+    .ab2{
+        right: 18%;
+    }
+}
+/* 1550px 사이즈 이하 미디어쿼리 끝 */
+
+/* 900px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 900px) {
+    .abtn{
+        top: 90%;
+    }
+}
+/* 900px 사이즈 이하 미디어쿼리 끝 */
+
+/* 400px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 400px) {
+    .abtn{
+        top: 80%;
+    }
+}
+/* 400px 사이즈 이하 미디어쿼리 끝 */

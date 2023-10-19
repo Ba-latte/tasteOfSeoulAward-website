@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울미식주간</title>
+    <!-- 구글 아이콘 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- 외부 CSS 링크 -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- 미디어쿼리 CSS 링크 -->
+    <link rel="stylesheet" href="./css/media.css">
+    <!-- 외부 JS 링크 -->
+    <script src="./js/main.js"></script>
+    <script src="./js/common.js"></script>
+    <!-- <script src="./js/dataList.js"></script> -->
+    <script src="./js/linksys.js"></script>
+</head>
+<body class="scbar">
+    <!-- 1. 상단 영역 -->
+    <div id="top">
+        <div class="topWrap">
+            <header class="top ibx">
+                <!-- 1-1. 로고와 아이콘 영역 -->
+                <section class="topArea">
+                    <!-- (1) 로고 -->
+                    <h1 class="logo">
+                        <a href="#">
+                            <img src="../b_logo.png" alt="상단 로고">
+                        </a>
+            
+                        <!-- (1-1) 로고 주변 원 -->
+                        <div class="circleList">
+                            <div class="circle cr1"></div>
+                            <div class="circle cr2"></div>
+                            <div class="circle cr3"></div>
+                            <div class="circle cr4"></div>
+                        </div>
+                    </h1>
+            
+                    <!-- (2) 기타 -->
+                    <aside class="etc">
+                        <ul>
+                            <!-- (2-1) 다국어 -->
+                            <li>
+                                <a href="#">
+                                    <img src="../00.자료수집/02.이미지데이터/01.메인페이지이미지/globe.png" alt="다국어 아이콘">
+                                </a>
+                                <ol class="lang">
+                                    <li>
+                                        <a href="#">KO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">EN</a>
+                                    </li>
+                                </ol>
+                            </li>
+            
+                            <!-- (2-2) 햄버거 -->
+                            <li>
+                                <a href="#">
+                                    <img class="hambtn" src="../00.자료수집/02.이미지데이터/01.메인페이지이미지/menu.png" alt="햄버거 아이콘">
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                </section>
+            
+                <!-- 1-2. 햄버거 버튼 클릭시 나오는 메뉴 (사이트맵) -->
+                <section class="siteMap">
+                    <div class="ibx">
+                        <!-- (1) 닫기 버튼 -->
+                        <div class="close">
+                            <a href="#">
+                                <img src="../00.자료수집/02.이미지데이터/01.메인페이지이미지/close.png" alt="닫기 버튼">
+                            </a>
+                        </div>
+                        <!-- (2) 사이트맵 제목 -->
+                        <h2>Site Map</h2>
+                        <nav class="siteMapGnbBx">
+                            <!-- 움직이는 메뉴 배경 박스 -->
+                            <div class="moveGnbIndicBx"></div>
+                            <ul>
+                                <li>
+                                    <!-- 상위 메뉴 -->
+                                    <a href="#">
+                                        행사 안내
+                                        <span class="material-symbols-outlined lnbMoreIcon expandMore">
+                                            expand_more
+                                        </span>
+                                    </a>
+                                    <!-- 하위 메뉴 -->
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="./sub_eventInfo.html">행사 소개</a>
+                                            </li>
+                                            <li>
+                                                <a href="./sub_programInfo.html">주요 프로그램 소개</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">셰프&바텐더 소개</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </li>
+                                <li>
+                                    <!-- 상위 메뉴 -->
+                                    <a href="#">테이스트오브서울 100선</a>
+                                </li>
+                                <li>
+                                    <!-- 상위 메뉴 -->
+                                    <a href="#">서울채식레스토랑 50선</a>
+                                </li>
+                                <li>
+                                    <!-- 상위 메뉴 -->
+                                    <a href="#">
+                                        프로그램
+                                        <span class="material-symbols-outlined lnbMoreIcon expandMore">
+                                            expand_more
+                                        </span>
+                                    </a>
+                                    <!-- 하위 메뉴 -->
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">테이스트오브서울 어워즈</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">특별 메뉴로의 초대</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">재래시장과 핫플의 맛남</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">도시와 농부의 맛남</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">미식과 영화의 맛남</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">전통주와의 맛남</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">해외 셰프와 서울 셰프의 맛남</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </li>
+                                <li>
+                                    <!-- 상위 메뉴 -->
+                                    <a href="#">
+                                        뉴스
+                                        <span class="material-symbols-outlined lnbMoreIcon expandMore">
+                                            expand_more
+                                        </span>
+                                    </a>
+                                    <!-- 하위 메뉴 -->
+                                    <div class="smenu">
+                                        <ol>
+                                            <li>
+                                                <a href="#">공지사항</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">미디어</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- (3) 상위메뉴 아래에 위치한 트랙과 바 -->
+                        <div class="barTrack">
+                            <!-- 마우스 따라다니는 바 -->
+                            <!-- <div class="bar"></div> -->
+                        </div>
+                    </div>
+                </section>
+            </header>
+        </div>
+    </div>
+
+
+
+    <!-- 2. 메인 영역 -->
+    <div id="cont">
+        <main class="cont ibx">
+            <!-- 2-1. 프로그램 섹션 -->
+            <header class="mainProgramInfo">
+                <div class="sectionTitBx">
+                    <!-- <div>테이스트오브서울 어워즈</div> -->
+                    <div>프로그램</div>
+                    <!-- 로고 주변 원 -->
+                    <div class="circleList">
+                        <div class="circle cr1"></div>
+                        <div class="circle cr2"></div>
+                        <div class="circle cr3"></div>
+                        <div class="circle cr4"></div>
+                    </div>
+                </div>
+                <!-- 섹션 lnb 박스 -->
+                <div class="sectionLnbBx">
+                    <nav class="programPageLnb">
+                        <ul>
+                            <li>
+                                <a href="#">테이스트오브서울 어워즈</a>
+                            </li>
+                            <li>
+                                <a href="#">특별 메뉴로의 초대</a>
+                            </li>
+                            <li>
+                                <a href="#">재래시장과 핫플의 맛남</a>
+                            </li>
+                            <li>
+                                <a href="#">도시와 농부의 맛남</a>
+                            </li>
+                            <li>
+                                <a href="#">미식과 영화의 맛남</a>
+                            </li>
+                            <li>
+                                <a href="#">전통주와의 맛남</a>
+                            </li>
+                            <li>
+                                <a href="#">해외 셰프와 서울 셰프의 맛남</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- 섹션 컨텐츠 박스 -->
+            <div class="sectionContBx">
+                <!-- 타이틀, 간략한 소개 문구 -->
+                <div class="categoryTit">
+                    <p></p>
+                    <h6></h6>
+                    <p></p>
+                </div>
+                <!-- 요약 박스 -->
+                <div class="categorySummary">
+                    <strong class="dateAndLocation"></strong>
+                    <ul>
+                        <li>
+                            <em>대상</em>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <!-- 주된 컨텐츠 소개(상세) -->
+                <div class="categoryTxtBx">
+                    <p></p>
+                    <div class="imgBx">
+                        <span class="ir"></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+    <!-- 3. 하단 영역 -->
+    <div id="info">
+        <footer class="info ibx">
+
+            <!-- 3-1. 하단 로고 -->
+            <h1 class="logo">
+                <img src="../w_logo.png" alt="하단 로고">
+
+                <!-- (3-1) 로고 주변 원 -->
+                <div class="circle cr1"></div>
+                <div class="circle cr2"></div>
+                <div class="circle cr3"></div>
+                <div class="circle cr4"></div>
+            </h1>
+
+            <!-- 3-2. 사이트 정보 -->
+            <div class="addr">
+                <address>
+                    <span>Taste of Seoul</span>
+                    전화번호 : 070-4366-7394 &nbsp;&nbsp;
+                    email : tasteofseoul.official@gmail.com
+                    <span>COPYRIGHT(C) Taste of Seoul. ALL RIGHTS RESERVED.</span>
+                </address>
+            </div>
+
+            <!-- 3-3. 기타 링크 -->
+            <div class="blink">
+                <!-- (1) sns -->
+                <div class="sns">
+                    <a href="https://www.seoul.go.kr/main/index.jsp" target="_blank">
+                        <img src="../00.자료수집/02.이미지데이터/01.메인페이지이미지/seoul_logo.gif" alt="서울시 로고">
+                        
+                    </a>
+                    <a href="https://www.facebook.com/tasteofseoul.official" target="_blank">
+                        <img src="../00.자료수집/02.이미지데이터/01.메인페이지이미지/sns-facebook.png" alt="페이스북 로고">
+                    </a>
+                    <a href="https://www.instagram.com/tasteofseoul_official/" target="_blank">
+                        <img src="../00.자료수집/02.이미지데이터/01.메인페이지이미지/sns-instagram.png" alt="인스타그램 로고">
+                    </a>
+                </div>
+
+                <!-- (2) 정책 -->
+                <div class="policy">
+                    <ul>
+                        <li>
+                            <a href="#">이메일무단수집거부</a>
+                        </li>
+                        <li>
+                            <a href="#">개인정보처리방침</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </footer>
+    </div>
+
+
+
+</body>
+</html>

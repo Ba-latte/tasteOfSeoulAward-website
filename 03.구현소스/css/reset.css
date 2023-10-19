@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* 요소 리셋 CSS - reset.css */
+/* 기본 세팅이 되어 있는 요소들 초기화 하기 */
+
+/* 마진, 패딩 초기화 */
+html, body, h1, h2, h3, h4, ul, ol, p{
+    margin: 0;
+    padding: 0;
+}
+
+/* 리스트 초기화 */
+ul, ol{
+    list-style: none;
+}
+
+/* root 글자 크기 세팅 */
+html{
+    font-size: 10px;
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+/* a요소 세팅 */
+a{
+    color: #111;
+    text-decoration: none;
+}
+/* 구글 아이콘 폰트 */
+.material-symbols-outlined{
+    display: none;
+    font-size: 5vh;
+    vertical-align: -1.8vh;
+    color: #555;
+}
+
+/* em 초기화 */
+em{
+    font-style: normal;
+}

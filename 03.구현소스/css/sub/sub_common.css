@@ -1,0 +1,290 @@
+@charset "utf-8";
+/* 서울미식주간 서브페이지 공통 CSS - sub_common.css */
+
+/* 웹폰트 CDN */
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Noto+Sans+KR&family=Rajdhani&display=swap');
+
+/*
+    [ 웹폰트 ]
+1.대문자로만 된 글자 전용 폰트
+font-family: 'Julius Sans One', sans-serif;
+2.대소문자 폰트
+font-family: 'Rajdhani', sans-serif;
+3.한글 폰트
+font-family: 'Noto Sans KR', sans-serif;
+*/
+
+/* 외부 CSS 합치기 */
+@import url(./sub_eventInfo.css);
+@import url(./sub_programInfo.css);
+@import url(./sub_tasteOfSeoulAward.css);
+@import url(./sub_seoulRestaurantWeek.css);
+@import url(./sub_seoulMarketDining.css);
+@import url(./sub_seoulMarché.css);
+@import url(./sub_seoulFoodCinema.css);
+@import url(./sub_open.css);
+@import url(./sub_PrivacyPolicy.css);
+@import url(./sub_RejectionEmail.css);
+
+
+/* 섹션 컨텐츠 겉박스 */
+.sectionContBx{
+    position: relative;
+    /* 부모자격 - .ir */
+    padding: 10vh;
+}
+/* 섹션 타이틀 */
+.sectionTitBx{
+    position: relative;
+    /* 부모자격 - .cr들 */
+    text-align: center;
+    
+    font-size: max(7vw, 60px);
+    font-family: 'Rajdhani', sans-serif;
+    margin: 10vh;
+    font-weight: bold;
+    color: #333;
+}
+/* 섹션 타이틀 로고 주변 원 이미지 공통 세팅 */
+.sectionTitBx .circle{
+    z-index: -1;
+}
+/* 섹션 타이틀 로고 주변 원 이미지 개별 세팅 */
+.sectionTitBx .cr1 {
+    top: 11%;
+    left: 6%;
+    width: 70px;
+    height: 70px;
+    background-color: #e2de73;
+
+    /* 애니메이션 */
+    animation: upAndDownAni 12s linear infinite;
+}
+.sectionTitBx .cr2 {
+    top: 55%;
+    left: 32%;
+    width: 45px;
+    height: 45px;
+    background-color: #19833b;
+
+    /* 애니메이션 */
+    animation: upAndDownAni 8s linear infinite;
+}
+.sectionTitBx .cr3 {
+    top: 25%;
+    left: 78%;
+    width: 85px;
+    height: 85px;
+    background-color: #b5416e;
+
+    /* 애니메이션 */
+    animation: upAndDownAni 20s linear infinite;
+}
+.sectionTitBx .cr4 {
+    top: 1%;
+    left: 97%;
+    width: 25px;
+    height: 25px;
+    background-color: #d8693e;
+
+    /* 애니메이션 */
+    animation: upAndDownAni 5s linear infinite;
+}
+
+/* 오르락 내리락 애니메이션 키프레임 */
+@keyframes upAndDownAni {
+    0%{
+        transform: translateY(0%);
+    }
+    25%{
+        transform: translateY(50%);
+    }
+    50%{
+        transform: translateY(0%);
+    }
+    75%{
+        transform: translateY(-50%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+
+/* 프로그램 소개 섹션 - 상단의 header 태그 */
+.mainProgramInfo{
+    padding-top: 80px;
+}
+/* 프로그램 소개 섹션 - 상단의 lnb 부분 */
+.programLnb{
+    position: relative;
+    /* 부모자격 - 가상요소 */
+}
+.programPageLnb::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    background-color: #ddd;
+    height: 1px;
+    width: 100%;
+}
+/* 페이지 내부 내비게이션 */
+.programPageLnb ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1vw;
+    /* background-color: rgb(219, 219, 219); */
+    /* height: 5vh; */
+    padding: 1vh;
+}
+/* 페이지 내부 내비게이션의 a요소 */
+.programPageLnb>ul a{
+    font-size: 1.7vh;
+    font-weight: bold;
+}
+/* a요소에 마우스오버시 글자 색상 변경 */
+.programPageLnb>ul a:hover{
+    color: #b5416e;
+}
+
+
+/* 섹션 컨텐츠 단락 공통 세팅 */
+.sectionContBx p{
+    padding: 0 2vw;
+    color: #2e2e2e;
+}
+/* 타이틀, 간략한 소개 문구 */
+/* 겉박스 */
+.categoryTit{
+    /* 단어별 줄바꿈 */
+    word-break: keep-all;
+}
+/* 첫번째 단락 - 간단 소개 문구 */
+.categoryTit p:first-child{
+    font-size: max(2.5vw, 19px);
+    text-align: center;
+    color: #b5416e;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+/* 타이틀 */
+.categoryTit h6{
+    font-size: max(3.7vw, 28px);
+    text-align: center;
+    margin: 0;
+    letter-spacing: 1px;
+    color: #333;
+}
+/* 타이틀 다음 단락 공통 세팅 */
+.categoryTit h6+p{
+    padding: 2vh 2vh 5vh;
+    text-align: center;
+
+    font-size: max(1.5vw, 14px);
+    color: #555;
+    /* 단어별 줄바꿈 */
+    word-break: keep-all;
+}
+/* 요약 겉박스 */
+.categorySummary{
+    width: 45vw;
+    /* height: 5vh; */
+    margin: 0vh auto 5vh;
+    padding: 3vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+    line-height: 1.7;
+}
+/* 날짜와장소 */
+.dateAndLocation{
+    display: inline-block;
+    color: #b5416e;
+    padding-bottom: 1vh;
+
+    font-size: max(1.6vw, 19px);
+    letter-spacing: 1px;
+    /* 단어별 줄바꿈 */
+    word-break: keep-all;
+}
+/* 대상 */
+.categorySummary li>em{
+    border-radius: 11px;
+    background-color: #b5416e;
+    padding: 0 10px;
+
+    font-style: normal;
+    font-size: 15px;
+    color: #fff;
+}
+/* 대상 li */
+.categorySummary ul li{
+    font-size: max(1vw, 15px);
+    color: #555;
+}
+
+
+
+
+
+/* 프로그램 리스트 li박스 공통 세팅 */
+.listBxDesign{
+    /* position: relative; */
+    display: flex;
+    gap: 5vh;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    width: 65%;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    padding: 70px;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+
+
+/******************************* 미디어쿼리 *******************************/
+
+/* 600px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 600px) {
+    .sectionContBx{
+        padding: 20vw 5vw 5vw;
+    }
+} /* 600px 사이즈 이하 미디어쿼리 끝 */
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {
+    /* 서브 페이지 내부 프로그램 링크 lnb */
+    .programPageLnb>ul{
+        flex-direction: column;
+        gap: 2vw;
+    }
+    /* 서브 페이지 - 섹션 컨텐츠 박스 패딩 세팅 */
+    .sectionContBx{
+        padding: 10vh 5vw;
+    }
+    /* 서브 페이지 - 요약 박스(그림자 세팅) */
+    .categorySummary{
+        width: 50vw;
+    }
+    
+} /* 500px 사이즈 이하 미디어쿼리 끝 */
+
+/* 440px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 440px) {
+    .sectionTitBx{
+        margin: 10vw 10vw 15vw;
+    }
+} /* 440px 사이즈 이하 미디어쿼리 끝 */
+
+

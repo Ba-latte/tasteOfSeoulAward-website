@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* 서울미식주간 서브 페이지 CSS - sub_RejectionEmail.css */
+/* 서브 페이지 - 이메일무단수집거부 */
+
+header.RejectionEmailSection{
+    margin-top: 15vh;
+}
+.policybox{
+    color: #666;
+    font-size: 14px;
+}
+.policybox>.ibx{
+    padding: 10vh;
+}
+.agr-tit1 {
+    display: block;
+    margin: 30px 0 20px 0;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    background: #f7f7f7;
+    padding: 12px;
+    padding-left: 30px;
+    border-bottom: 1px solid #ddd;
+    border-left: 3px solid #ddd;
+}
+.agr-tit2 {
+    display: block;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+.agr-tit3 {
+    display: block;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+@media screen and (max-width: 750px) {
+    .agr-tit1 {
+        margin: 15px 0 10px 0;
+        font-size: 13px;
+        padding-left: 15px;
+    }
+    .agr-tit2 {
+        margin: 20px 0;
+        font-size: 13px;
+    }
+    .agr-tit3 {
+        margin: 20px 0;
+        font-size: 13px;
+    }
+}

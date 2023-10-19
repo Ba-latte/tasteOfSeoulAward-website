@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* 서울미식주간 서브 페이지 CSS - sub_seoulMarketDining.css */
+/* 서브 페이지 - 재래시장과 핫플의 맛남 */
+
+/* 주된 컨텐츠 소개(상세) */
+/* 겉박스 */
+.categoryTxtBx.sub_dining{
+    position: relative;
+    bottom: -60px;
+}
+/* 타이틀 */
+.categoryTxtBx>h6.cw{
+    text-align: center;
+    margin: 10vh 0 0;
+    padding: 0;
+    word-break: keep-all;
+    font-size: max(2.5vw, 19px);
+    color: #ddd;
+    text-shadow: 1px 1px #000;
+}
+/* 내용 */
+.categoryTxtBx>p.cw{
+    margin: 3vh 0 3vh;
+    word-break: keep-all;
+    font-size: max(1.5vw, 14px);
+    color: #ddd;
+    text-shadow: 1px 1px #000;
+}
+/* 배경 이미지 */
+#cont.sub_dining{
+    position: relative;
+}
+.bgi1 img{
+    vertical-align: bottom;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    height: max(20vw, 300px);
+    object-fit: cover;
+}
+
+
+
+
+/******************************* 미디어쿼리 *******************************/
+/* 600px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 600px) {
+    .categoryTxtBx.sub_dining{
+        bottom: 0;
+    }
+    .bgi1 img{
+        height: max(20vw, 250px);
+    }
+} /* 600px 사이즈 이하 미디어쿼리 끝 */
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {
+    .sectionContBx.sub_dining{
+        padding: 20vw 5vw 5vw;
+    }
+} /* 500px 사이즈 이하 미디어쿼리 끝 */
+
+/* 440px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 440px) {
+    .bgi1 img{
+        height: 350px;
+    }
+} /* 440px 사이즈 이하 미디어쿼리 끝 */
+
+/* 240px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 240px) {
+    .bgi1 img{
+        height: 400px;
+    }
+} /* 240px 사이즈 이하 미디어쿼리 끝 */

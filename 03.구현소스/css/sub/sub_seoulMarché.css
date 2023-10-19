@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* 서울미식주간 서브 페이지 CSS - sub_seoulMarché.css */
+/* 서브 페이지 - 도시와 농부의 맛남 */
+
+/* 주된 컨텐츠 소개(상세) */
+/* 특장점 리스트 (ol) */
+.marcheList{
+    display: flex;
+    margin: 9vh 0;
+    gap: 1vw;
+
+    text-align: center;
+    font-size: 1.7vh;
+    /* 단어별 줄바꿈 */
+    word-break: keep-all;
+}
+.marcheList>li>img{
+    width: 100%;
+}
+
+
+
+/******************************* 미디어쿼리 *******************************/
+/* 700px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 700px) {
+    .marcheList{
+        flex-direction: column;
+        gap: 15vw;
+    }
+} /* 700px 사이즈 이하 미디어쿼리 끝 */

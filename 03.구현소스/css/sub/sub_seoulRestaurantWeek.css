@@ -1,0 +1,169 @@
+@charset "utf-8";
+/* 서울미식주간 서브 페이지 CSS - sub_seoulRestaurantWeek.css */
+/* 서브 페이지 - 특별메뉴로의 초대 */
+
+
+/* 상단의 공통 세팅은 sub_common.css에 있음 */
+/* 유의사항 단락만 개별 세팅 줌 */
+.categoryTit .notice{
+    font-size: 1vw;
+}
+
+/* 주된 컨텐츠 소개(상세) */
+/* 겉박스 */
+.categoryTxtBx.sub_week{
+    position: relative;
+    padding: 0;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f7f7f7;
+}
+/* 제목 */
+.categoryTxtBx .stit{
+    text-align: center;
+    font-size: max(3vw, 25px);
+    padding: 10vh 0 15vh;
+    margin: 0 auto;
+}
+/* 프로그램 리스트 ul */
+ul.program-list3{
+    padding-bottom: 10vh;
+}
+/* 프로그램 리스트 li박스 공통 세팅 */
+.listBxDesign{
+    /* position: relative; */
+    display: flex;
+    gap: 5vh;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    width: 65%;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    padding: 70px;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+/* 팝업 아티클 .inf세팅 */
+article.inf{
+    flex: 1;
+    /* 등분할 */
+}
+/* 팝업 이미지 공통 세팅 */
+.program-list3>li>img{
+    width: 35%;
+}
+/* 팝업 각각의 내용 세팅 */
+.program-list3 .inf>strong{
+    font-size: 1.5vw;
+    color: #333;
+}
+.program-list3 .inf>p{
+    padding: 0;
+}
+p.colRed{
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: #b5416e;
+    margin-top: 20px;
+}
+p.popTxt{
+    margin-top: 20px;
+    font-size: .9vw;
+    font-weight: normal;
+}
+/* 팝업 각 옵션들 ul */
+.program-list3 .opt{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 1vh;
+    margin: 2vh 0;
+    padding: 2vh 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    font-size: 0.8vw;
+    color: #555;
+}
+/* 각 옵션들 li 공통 세팅 */
+.program-list3 .opt>li+li{
+    margin-top: 10px;
+}
+/* 각 옵션들 제목 세팅 */
+ul.opt>li>em{
+    border-radius: 11px;
+    background-color: #b5416e;
+    padding: 0 10px;
+    margin-right: 5px;
+
+    font-style: normal;
+    font-size: .8vw;
+    color: #fff;
+
+}
+/* 첫번째 팝업 리스트 상세 부분 */
+.left_indent{
+    /* position: relative; */
+    /* padding-left: 50px; */
+}
+/* 첫번째 팝업 리스트 상세부분의 em 개별 세팅 */
+.left_indent>em{
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+}
+/* '상세'부분의 마지막 문장 */
+.caution{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    font-size: .6vw;
+}
+
+/* 두번째 슬라이드의 이미지 세팅 */
+.nonDisplay{
+    display: none;
+    /* 처음에는 앞쪽에 있는 이미지가 안 보이다가 미디어쿼리가 적용되면 보일 예정임! */
+}
+
+
+
+
+/***************************************** 미디어쿼리 *****************************************/
+
+/* 1200px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 1200px) {
+    .program-list3>li>img {
+        width: auto;
+    }
+}
+/* 1200px 사이즈 이하 미디어쿼리 끝 */
+
+/* 600px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 600px) {
+    .sectionContBx .sub_week{
+        padding: 15vw 5vw;
+    }
+    .program-list3>li>img{
+        width: 100%;
+    }
+}
+/* 600px 사이즈 이하 미디어쿼리 끝 */
+
+/* 500px 사이즈 이하 미디어쿼리 시작 */
+@media screen and (max-width: 500px) {
+    .listBxDesign.sub_week{
+        width: 55%;
+    }
+}
+/* 500px 사이즈 이하 미디어쿼리 끝 */
+

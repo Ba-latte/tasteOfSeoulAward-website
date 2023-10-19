@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* 서울미식주간 서브 페이지 CSS - sub_seoulMarché.css */
+/* 서브 페이지 - 도시와 농부의 맛남 */
+.sectionContBx.cinema{
+    padding: 9vh;
+}
+/* 주된 컨텐츠 소개(상세) */
+/* 요약 박스 */
+.categorySummary.cinema{
+    width: 60vw;
+}
+/* '공동주최'와 로고 세로중앙정렬하기 */
+.categorySummary.cinema em+img{
+    transform: translateY(10px);
+}
+/* 영화 관람 이벤트 제목 */
+.cinemaEventTxt{
+    margin: 5vh 0 10vh;
+    font-size: 6vh;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+/* 영화 관람 이벤트 리스트 */
+.cinemaEventList{
+    display: flex;
+    justify-content: center;
+    gap: 5vh;
+
+    font-size: 1.7vh;
+    color: #333;
+}
+.cinemaEventList>li{
+    flex: 1;
+}
+/* li박스 개별 세팅 */
+.listBxDesign.cinema{
+    box-shadow: 5px 5px 12px rgba(0,0,0,0.15);
+}
+/* 이미지 */
+.listBxDesign.cinema>img{
+    margin: 0 auto;
+}
+/* 제목 */
+.listBxDesign.cinema li>strong{
+    display: block;
+    text-align: center;
+    font-size: 2.5vh;
+}
+/* 리스트 내용 공통 세팅 */
+.listBxDesign.cinema>ul>li{
+    text-align: center;
+    margin: 2vh;
+}
+/* 부제목 */
+.listBxDesign.cinema>ul>li:first-child{
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 1.4vh;
+}
+.listBxDesign.cinema>ul>li:nth-child(2){
+    font-size: 2.5vh;
+    font-weight: bold;
+}
