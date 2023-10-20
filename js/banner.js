@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
     setBan(banbx);
 
     // 불릿 클릭시 배너 바뀌는 함수 호출
-    setIndicLinkFn(banbx);
+    // setIndicLinkFn(banbx);
 
 }); ///////////////// 로드 구역 ///////////////////////
 
